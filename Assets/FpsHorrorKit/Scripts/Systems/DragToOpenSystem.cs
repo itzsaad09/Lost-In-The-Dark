@@ -7,23 +7,27 @@ namespace FpsHorrorKit
         public enum DoorDirection { left, right, front, back }
 
         [Header("Rotation Settings")]
-        [Tooltip("Mouse hareket hassasiyeti")]
+        [Tooltip("Sensitivity of the mouse movement")]
         [SerializeField] private float rotationSpeed = 5f;
 
-        [Tooltip("Kapının kapalı konumdaki açı değeri (örn. 0)")]
+        [Tooltip("The angle of the door when closed (e.g., 0)")]
         [SerializeField] private float minAngle = 0f;
 
-        [Tooltip("Kapının tamamen açıldığı açı (örn. 90)")]
+        [Tooltip("The angle of the door when fully open (e.g., 90)")]
         [SerializeField] private float maxAngle = 90f;
 
-        [Tooltip("Kapı'nın player ile etkileşim durumunu kontrol eden yön")]
+        [Tooltip("Direction used to determine player side relative to the door")]
         [SerializeField] private DoorDirection doorDirection = DoorDirection.left;
 
         [Header("Collider Settings")]
         [SerializeField] private bool colliderDisabledDuringInteraction = false;
 
-        [Header("Intercact Text")]
-        [SerializeField] Sprite interactImageUi;
+        [Header("Audio Settings")]
+        [Tooltip("Reference to the AudioSource attached to the door")]
+        public AudioSource doorAudioSource;
+
+        [Header("Interaction UI")]
+        [SerializeField] private Sprite interactImageUi;
 
         private float currentAngle = 0f;
         private float initialAngle;
@@ -38,7 +42,13 @@ namespace FpsHorrorKit
 
             initialAngle = transform.localEulerAngles.y;
 
-            // Kapının başlangıçtaki sağ yönünü saklıyoruz.
+            // Initialize the audio source settings if it exists
+            if (doorAudioSource != null)
+            {
+                doorAudioSource.playOnAwake = false;
+                doorAudioSource.loop = true;
+            }
+
             switch (doorDirection)
             {
                 case DoorDirection.left:
@@ -56,9 +66,7 @@ namespace FpsHorrorKit
             }
         }
 
-        public void Interact()
-        {
-        }
+        public void Interact() { }
 
         public void HoldInteract()
         {
@@ -66,29 +74,42 @@ namespace FpsHorrorKit
             {
                 _collider.enabled = false;
             }
-            // Mouse'un X eksenindeki hareketi alıyoruz.
+
             float mouseX = Input.GetAxis("Mouse X");
 
-            // Player'ın kapıya göre solunda mı sağında mı olduğunu belirlemek için:
-            float sideMultiplier = 1f; // varsayılan
+            float sideMultiplier = 1f;
             if (player != null)
             {
-                // Kapı pivotundan player'a doğru vektör
                 Vector3 doorToPlayer = player.position - transform.position;
-                // initialRight vektörü ile dot product hesaplıyoruz.
-                // Eğer sonuç pozitifse, player kapının sağındadır.
                 float dot = Vector3.Dot(initialForward, doorToPlayer);
-
-                // Burada; eğer player sağdaysa mouse hareketinin etkisini tersine çeviriyoruz.
                 sideMultiplier = (dot > 0) ? -1f : 1f;
             }
 
-            // Mouse hareketine göre açıyı güncelliyoruz.
+            float previousAngle = currentAngle;
             currentAngle += mouseX * rotationSpeed * sideMultiplier;
             currentAngle = Mathf.Clamp(currentAngle, minAngle, maxAngle);
-            float targetAngle = initialAngle + currentAngle;
 
-            // Kapıyı Y ekseni etrafında döndürüyoruz.
+            // Audio Logic: Uses the referenced doorAudioSource
+            if (doorAudioSource != null)
+            {
+                // If the door is moving and not at its limits
+                if (Mathf.Abs(currentAngle - previousAngle) > 0.001f)
+                {
+                    if (!doorAudioSource.isPlaying)
+                    {
+                        doorAudioSource.Play();
+                    }
+                }
+                else
+                {
+                    if (doorAudioSource.isPlaying)
+                    {
+                        doorAudioSource.Stop();
+                    }
+                }
+            }
+
+            float targetAngle = initialAngle + currentAngle;
             transform.localEulerAngles = new Vector3(0, targetAngle, 0);
         }
 
@@ -102,6 +123,11 @@ namespace FpsHorrorKit
             if (_collider != null)
             {
                 _collider.enabled = true;
+            }
+
+            if (doorAudioSource != null && doorAudioSource.isPlaying)
+            {
+                doorAudioSource.Stop();
             }
         }
     }

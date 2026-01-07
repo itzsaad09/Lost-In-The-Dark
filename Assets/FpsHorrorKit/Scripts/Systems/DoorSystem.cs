@@ -12,9 +12,9 @@ namespace FpsHorrorKit
         [SerializeField] private string useKeyText = "Use Key";
 
         [Header("Door Settings")]
-        [Tooltip("Kapı kilitli mi?")] public bool isLocked;
-        [Tooltip("Kapının anahtarına sahip mi?")] public bool hasKey;
-        [Tooltip("Kapının menteşe etrafında dönme hızı")] public float rotationSpeed = 100f;
+        [Tooltip("Is the door locked?")] public bool isLocked;
+        [Tooltip("Does the player have the key for this door?")] public bool hasKey;
+        [Tooltip("Rotation speed of the door")] public float rotationSpeed = 100f;
         public float endRotation;
         public AudioSource doorAudioSource;
 
@@ -69,8 +69,11 @@ namespace FpsHorrorKit
         IEnumerator OpenDoor(float targetRotation)
         {
             isFinished = false;
-            if (doorAudioSource != null) doorAudioSource.Play();
-
+            if (doorAudioSource != null)
+            {
+                doorAudioSource.loop = false;
+                doorAudioSource.Play();
+            }
             while (Mathf.Abs(Mathf.DeltaAngle(transform.localEulerAngles.y, targetRotation)) > 0.1f)
             {
                 float step = rotationSpeed * Time.deltaTime;

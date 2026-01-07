@@ -70,6 +70,7 @@ namespace FpsHorrorKit
 
         private void Update()
         {
+            if (Time.timeScale == 0) return;
             HandleMovement();
             HandleGravity();
             HandleJumping();
@@ -79,6 +80,7 @@ namespace FpsHorrorKit
 
         private void LateUpdate()
         {
+            if (Time.timeScale == 0) return;
             HandleRotation();
         }
 
