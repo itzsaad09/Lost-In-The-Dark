@@ -27245,25 +27245,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FpsHorrorKit.ZombieFollow
   currentState: 0
-  idleDuration: 10
-  wanderRadius: 15
-  detectionRange: 10
+  idleDuration: 5
+  wanderRadius: 10
+  detectionRange: 15
   viewAngle: 90
   obstacleMask:
     serializedVersion: 2
     m_Bits: 64
-  hearingRange: 8
+  hearingRange: 10
   canHearPlayer: 1
   patrolSpeed: 1
   chaseSpeed: 4
-  attackRange: 3
+  attackRange: 1
   moanSound: {fileID: 8300000, guid: 2d29001df0d23484ca8b0664a6eb05fe, type: 3}
   breathSound: {fileID: 8300000, guid: ae53a852932fb0049a86a140257b4c4e, type: 3}
   attackSound: {fileID: 8300000, guid: 096626fe2e82666419740cc60305bdfa, type: 3}
-  volume: 0.2
+  volume: 0.5
   player: {fileID: 658617851}
   gameOverUI: {fileID: 2126811926}
-  gameOverDelay: 1
+  gameOverDelay: 3
 --- !u!95 &1029947510
 Animator:
   serializedVersion: 7
@@ -40459,14 +40459,14 @@ MonoBehaviour:
   canHearPlayer: 1
   patrolSpeed: 1
   chaseSpeed: 4
-  attackRange: 3
+  attackRange: 1
   moanSound: {fileID: 8300000, guid: 2d29001df0d23484ca8b0664a6eb05fe, type: 3}
   breathSound: {fileID: 8300000, guid: ae53a852932fb0049a86a140257b4c4e, type: 3}
   attackSound: {fileID: 8300000, guid: 096626fe2e82666419740cc60305bdfa, type: 3}
-  volume: 0.2
+  volume: 0.5
   player: {fileID: 658617851}
   gameOverUI: {fileID: 2126811926}
-  gameOverDelay: 1
+  gameOverDelay: 3
 --- !u!95 &1504606818
 Animator:
   serializedVersion: 7
