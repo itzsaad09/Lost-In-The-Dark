@@ -2251,6 +2251,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1683189347562383599, guid: ff5caca37e2ec244786caed5adb53dd0, type: 3}
   m_PrefabInstance: {fileID: 1056104757}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &70545617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70545618}
+  m_Layer: 5
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &70545618
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70545617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 800236400}
+  m_Father: {fileID: 1939938517}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &74057088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12634,6 +12670,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_text
+      value: 'Lost In The Dark - Game Programming
+
+
+        This Project is done
+        in unity using assets.
+
+
+        This is done by Hafiz Muhammad Saad 53180
+        & Faiqa Riaz 55088'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_fontSize
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_overflowMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381063581545389312, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371452734685743221, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
+      propertyPath: _message
+      value: 'Lost In The Dark - Game Programming
+
+
+        This Project is done
+        in unity using assets.
+
+
+        This is done by Hafiz Muhammad Saad 53180
+        & Faiqa Riaz 55088'
+      objectReference: {fileID: 0}
     - target: {fileID: 8188921748430414098, guid: f12f96a43376b4949ab27575f08eaefc, type: 3}
       propertyPath: m_Name
       value: ITO_Paper_a
@@ -20638,6 +20722,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7171520626194810225, guid: f9e892b9cbfcb0a459790b93f618ab1e, type: 3}
   m_PrefabInstance: {fileID: 800163163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &800236399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800236400}
+  - component: {fileID: 800236402}
+  - component: {fileID: 800236401}
+  m_Layer: 5
+  m_Name: Img
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &800236400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800236399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 70545618}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &800236401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800236399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 3843671b085484a4da0dc8877effa5f3, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &800236402
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800236399}
+  m_CullTransparentMesh: 1
 --- !u!1001 &805374587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22705,6 +22861,7 @@ MonoBehaviour:
   resumeMenu: {fileID: 910007089}
   gameOverUI: {fileID: 2126811926}
   levelUpUI: {fileID: 1310595585}
+  instructionsUI: {fileID: 0}
 --- !u!4 &880425159
 Transform:
   m_ObjectHideFlags: 0
@@ -24041,6 +24198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 264345135265544730, guid: eb87be1fb1853c14eb7feb36eee9b6f4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 663843819498939655, guid: eb87be1fb1853c14eb7feb36eee9b6f4, type: 3}
       propertyPath: m_Name
       value: Inspectable Paper
@@ -24084,6 +24245,18 @@ PrefabInstance:
     - target: {fileID: 691486628438836954, guid: eb87be1fb1853c14eb7feb36eee9b6f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529733736575684961, guid: eb87be1fb1853c14eb7feb36eee9b6f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971060180607301839, guid: eb87be1fb1853c14eb7feb36eee9b6f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284950665595169351, guid: eb87be1fb1853c14eb7feb36eee9b6f4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51850,6 +52023,7 @@ RectTransform:
   - {fileID: 910007090}
   - {fileID: 1310595586}
   - {fileID: 2126811927}
+  - {fileID: 70545618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
