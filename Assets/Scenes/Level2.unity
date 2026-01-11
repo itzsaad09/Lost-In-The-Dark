@@ -33854,6 +33854,18 @@ PrefabInstance:
       propertyPath: sprintClip
       value: 
       objectReference: {fileID: 8300000, guid: 55563037f8fc7c447954c3d00ae494c3, type: 3}
+    - target: {fileID: 4367792595972152355, guid: 9771a198ce5adb445946c7134220ee92, type: 3}
+      propertyPath: accelerationRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367792595972152355, guid: 9771a198ce5adb445946c7134220ee92, type: 3}
+      propertyPath: decelerationRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367792595972152355, guid: 9771a198ce5adb445946c7134220ee92, type: 3}
+      propertyPath: headBobAcceleration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8011327896853317888, guid: 9771a198ce5adb445946c7134220ee92, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.04
