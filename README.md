@@ -14,9 +14,6 @@ In "Lost In The Dark", players navigate through eerie environments, solving puzz
 | **Game Start** | **Game Play** |
 | ![Game Over](./screenshots/game_over.png) | ![Level Up](./screenshots/level_up.png) |
 | **Game Over** | **Level Up** |
-
-| |
-|:---:|
 | ![Game Pause](./screenshots/game_pause.png) |
 | **Game Pause** |
 
