@@ -6,6 +6,20 @@
 
 In "Lost In The Dark", players navigate through eerie environments, solving puzzles and uncovering secrets while avoiding the dangers that lurk in the shadows. With a focus on atmosphere and tension, every step could be your last.
 
+## 📸 Screenshots
+
+| | |
+|:---:|:---:|
+| ![Game Start](./screenshots/game_start.png) | ![Game Play](./screenshots/game_play.png) |
+| **Game Start** | **Game Play** |
+| ![Game Over](./screenshots/game_over.png) | ![Level Up](./screenshots/level_up.png) |
+| **Game Over** | **Level Up** |
+
+| |
+|:---:|
+| ![Game Pause](./screenshots/game_pause.png) |
+| **Game Pause** |
+
 ## ✨ Features
 
 - **Immersive First-Person Experience:** Realistic FPS controller with smooth movement and interaction.
